@@ -8,7 +8,7 @@ A simple Devops CICD project.
 ### **Table of Contents**
 1. [Project Overview](#1-project-overview)
 2. [Architecture Diagram](#2-architecture-diagram)
-3. [Step 1: Spring boot application](#3-spring-boot-app)
+3. [Step 1: Spring boot application](#3-step-1-spring-boot-application)
 4. [Step 2: AWS EC2 instance preparation](#4-aws-instance-preparation)
 5. [Step 3: Install Dependencies on EC2](#5-install-dependencies-ec2)
 6. [Step 4: AWS codebuild setup](#6-code-build)
