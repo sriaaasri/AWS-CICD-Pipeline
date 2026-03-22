@@ -23,65 +23,38 @@ A simple Devops CICD project.
 
 ---
 
-
-
 ### **2. Architecture Diagram**
 
 ---
 
-
-
-### **3. Spring Boot Application**
+### **3. Step 1: Spring boot application**
 
 ---
 
-
-
-### **4. AWS EC2 Instance Preparation**
+### **4. Step 2: AWS EC2 instance preparation**
 
 ---
 
-
-
-
-### **5. Install Dependencies on EC2**
+### **5. Step 3: Install Dependencies on EC2**
 
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### **6. AWS CodeBuild Setup**
+### **6. Step 4: AWS codebuild setup**
 
 ---
 
-### **7. AWS CodeDeploy Setup**
+### **7. Step 5: AWS codedeploy setup**
 
 ---
 
-### **8. AWS CodePipeline Setup**
+### **8. Step 6: AWS codepipeline setup**
 
 ---
 
-### **9. Pushing Changes and Verification**
+### **9. Step 7: pushing changes and verification**
 
 ---
 
 ### **10. Conclusion**
 
 ---
-
