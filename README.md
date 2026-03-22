@@ -84,6 +84,27 @@ http://localhost:8080
 
 ### **4. Step 2: AWS EC2 instance preparation**
 
+1.  **Launch EC2 Instance:**
+    * Navigate to the AWS EC2 console.
+    * Launch a new instance using the **Amazon Linux** AMI.
+    * Select the **t2.micro** instance type for free-tier eligibility.
+    * Create and assign a new key pair for SSH access.
+
+<img src="diagrams/ec2.png">
+
+2.  **Configure Security Group:**
+    * Create a security group with the following inbound rules:
+        * **Type:** SSH, **Protocol:** TCP, **Port:** 22, **Source:** Anywhere (0.0.0.0/0)
+        * **Type:** HTTP, **Protocol:** TCP, **Port:** 80, **Source:** Anywhere (0.0.0.0/0)
+        * **Type:** HTTPS, **Protocol:** TCP, **Port:** 443, **Source:** Anywhere (0.0.0.0/0)
+
+<img src="diagrams/securityGroups.png">
+
+3.  **Connect to EC2 Instance:**
+    * Use SSH to connect to the instance's public IP address.
+    ```bash
+    ssh -i /path/to/key.pem ec2-user@<ec2-public-ip>
+    ```
 ---
 
 ### **5. Step 3: Install Dependencies on EC2**
