@@ -69,7 +69,17 @@ Navigate to the project directory and package the application:
 ```bash
 mvn clean package
 ```
+#### ▶️ Run the Application Locally
 
+```bash
+java -jar target/<your-app-name>.war
+```
+#### 🌐 Verify the Application
+Open your browser and access:
+
+```bash
+http://localhost:8080
+```
 ---
 
 ### **4. Step 2: AWS EC2 instance preparation**
