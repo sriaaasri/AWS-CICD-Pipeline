@@ -12,9 +12,9 @@ A simple Devops CICD project.
 4. [Step 2: AWS EC2 instance preparation](#4-step-2-aws-ec2-instance-preparation)
 5. [Step 3: Install Dependencies on EC2](#5-step-3-install-dependencies-on-ec2)
 6. [Step 4: AWS codebuild setup](#6-step-4-aws-codebuild-setup)
-7. [Step 5: AWS codedeploy setup](#7-step-4-aws-codedeploy-setup)
-8. [Step 6: AWS codepipeline setup](#8-step-4-aws-codepipeline-setup)
-9. [Step 7: pushing changes and verification](#9-pushing-changes-and-verification)
+7. [Step 5: AWS codedeploy setup](#7-step-5-aws-codedeploy-setup)
+8. [Step 6: AWS codepipeline setup](#8-step-6-aws-codepipeline-setup)
+9. [Step 7: pushing changes and verification](#9-step-7-pushing-changes-and-verification)
 10. [Conclusion](#10-conclusion)
 
 ---
