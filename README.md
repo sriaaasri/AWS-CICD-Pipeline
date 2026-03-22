@@ -18,3 +18,70 @@ A simple Devops CICD project.
 10. [Conclusion](#10-conclusion)
 
 ---
+
+### **1. Project Overview**
+
+---
+
+
+
+### **2. Architecture Diagram**
+
+---
+
+
+
+### **3. Spring Boot Application**
+
+---
+
+
+
+### **4. AWS EC2 Instance Preparation**
+
+---
+
+
+
+
+### **5. Install Dependencies on EC2**
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### **6. AWS CodeBuild Setup**
+
+---
+
+### **7. AWS CodeDeploy Setup**
+
+---
+
+### **8. AWS CodePipeline Setup**
+
+---
+
+### **9. Pushing Changes and Verification**
+
+---
+
+### **10. Conclusion**
+
+---
+
