@@ -109,20 +109,66 @@ http://localhost:8080
 
 ### **5. Step 3: Install Dependencies on EC2**
 
+In this step, we install the required dependencies on the EC2 instance to run the Spring Boot application and enable deployments using AWS CodeDeploy.
 
+#### ☕ JDK 17
 
+- Required to run the Spring Boot application
+- Install Java 17 (Amazon Corretto)
 
+```bash
+sudo dnf install java-17-amazon-corretto -y
+java -version
+```
+configure JAVA 
 
+```bash
+echo "export JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto" >> ~/.bashrc
+echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ~/.bashrc
+source ~/.bashrc
+```
 
+#### 🌐 Nginx
 
+2)  **Installing and configuring**
+    * Used as a reverse proxy to handle incoming traffic
+    * Routes requests from port 80 to the application server (Tomcat).
 
+```bash
+sudo dnf install nginx -y
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl status nginx
+```
+3) **Tomcat 11**
+    * Used to deploy and run the Spring Boot WAR file.
 
+```bash
+cd /home/ec2-user
+wget https://downloads.apache.org/tomcat/tomcat-11/latest/bin/apache-tomcat-11.tar.gz
+tar -xvzf apache-tomcat-11.tar.gz
+mv apache-tomcat-11* tomcat
+```
 
+4) **CodeDeploy Agent**
+    * Required for AWS CodeDeploy to access and deploy to the EC2 instance.
 
+```bash
+sudo dnf install ruby -y
+sudo dnf install wget -y
 
+cd /home/ec2-user
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
+```
+#### Start and enable CodeDeploy Agent
 
-
-
+```bash
+sudo systemctl start codedeploy-agent
+sudo systemctl enable codedeploy-agent
+sudo systemctl status codedeploy-agent
+```
 
 ---
 
