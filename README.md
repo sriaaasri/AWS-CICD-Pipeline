@@ -46,7 +46,29 @@ This project demonstrates how to build an end-to-end CI/CD pipeline using AWS se
 ---
 
 ### **3. Step 1: Spring boot application**
+In this step, we will create a simple Spring Boot application using Spring Initializr.
 
+🔗 Generate project from: https://start.spring.io/
+
+#### Project Configuration:
+- Project: Maven
+- Language: Java
+- Spring Boot: 4.0.4
+- Packaging: WAR
+- Configuration: YAML
+- Java Version: 17
+
+#### Dependencies:
+1) Spring Web
+
+After generating the project, download and extract it to your local machine.
+
+#### 🔧 Build the Application (WAR)
+Navigate to the project directory and package the application:
+
+```bash
+mvn clean package
+```
 
 ---
 
