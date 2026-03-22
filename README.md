@@ -29,13 +29,61 @@ A simple Devops CICD project.
 
 ### **3. Step 1: Spring boot application**
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ### **4. Step 2: AWS EC2 instance preparation**
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 
 ### **5. Step 3: Install Dependencies on EC2**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
@@ -48,6 +96,20 @@ A simple Devops CICD project.
 ---
 
 ### **8. Step 6: AWS codepipeline setup**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
