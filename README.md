@@ -174,6 +174,41 @@ sudo systemctl status codedeploy-agent
 
 ### **6. Step 4: AWS codebuild setup**
 
+--steps to create build project
+Project name: <name>
+Project type: Default project
+Source provider: GitHub
+**Connect your github account**
+Repository: Repository in my GitHub account
+
+**Environment**
+* Provisioning model : On-demand
+* Environment image: Managed image
+* Compute: EC2
+* Running mode: Instance
+* Operating system: Amazon Linux
+* Runtime: Base
+* Service role: New service role
+* Role name: <Give a new service role name>
+
+**Additional configuration**
+* compute : 2vCPUs, 4 GIB (just to avoid extra charges)
+
+**BuildSpec**
+* Build specifications: Use a buildspec file
+* name: buildspec.yml  (make sure create a buildspec.yml file in root directory of you project)
+
+**Artifacts**
+* Type: Amazon S3
+* Bucketname: <give a existing bucket name created only to save final artifacts>
+* name: <name you prefered of final artifact>
+* Artifacts packaging: Zip
+
+**Logs**
+* Group name: /aws/codebuild/<project-name>
+
+<img src="diagrams/codebuild.png">
+
 ---
 
 ### **7. Step 5: AWS codedeploy setup**
