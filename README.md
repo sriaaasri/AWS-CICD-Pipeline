@@ -20,51 +20,37 @@ A simple Devops CICD project.
 ---
 
 ### **1. Project Overview**
+This project demonstrates how to build an end-to-end CI/CD pipeline using AWS services integrated with GitHub.
+	It automates the process of building and deploying an application whenever code changes are pushed to the repository.
+	The pipeline uses AWS CodePipeline for orchestration, CodeBuild for building the application, and CodeDeploy for deploying it to an EC2 instance.
+	This setup eliminates manual deployment steps and ensures faster and more reliable releases.
+	The project is designed as a beginner-friendly guide to understanding real-world DevOps workflows.
 
 ---
 
 ### **2. Architecture Diagram**
 
+```
+👨‍💻 Developer 
+      │
+      ▼
+📦 GitHub Repository 
+      │  (Push Code)
+      ▼
+🚀 AWS CodePipeline 
+      │  (Orchestrates CI/CD)
+      ▼
+🔨 AWS CodeBuild ──▶ 📂 Amazon S3 ──▶ 🚚 AWS CodeDeploy ──▶ 🖥️ Amazon EC2 ──▶ 🌐 End Users
+     (Build App)      (Store Artifact)    (Deploy App)        (Run App)         (Access App)
+```
 ---
 
 ### **3. Step 1: Spring boot application**
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ### **4. Step 2: AWS EC2 instance preparation**
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ---
 
