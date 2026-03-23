@@ -251,7 +251,7 @@ we need a service role for codedeploy to access EC2 instances
 * "appspec.yml" configuration file should be present in S3 output root location
 * S3 bucket should contain output zip file created by codebuild
 
-Access you application in deployment server 
+#### Access you application in deployment server 
 
 * Make sure nginx in configured to route traffic to tomcat server 80->8080
 * Append application war file name before the endpoints
@@ -263,10 +263,40 @@ http://<EC2-public-IP>/<warfile-name>/<endpoints>
 
 <img src="diagrams/deployment.png">
 
-
 ---
 
 ### **8. Step 6: AWS codepipeline setup**
+
+#### CodePipeline:
+With CodePipeline, you can create a workflow that automatically moves your code changes through the build and deployment stage. In our case, you'll see how a new push to your GitHub repository automtically triggers a build in CodeBuild (continuous integration), and a then a deployment in CodeDeploy (continuous deployment)!
+
+### Configuration details
+* Category: Build custom pipeline
+* Pipeline name: "prefered pipeline name"
+* Execution mode: Superseded
+* Service role: "prefered service role name"
+
+--------------------------------------------------
+* Source provider: GitHub (via GitHub App).
+* Connection: "create new connection or use existing one"
+* Repository name: "username/Repository name"
+* Default Branch: "Branch name"
+* Webhook: Enable
+----------------------------------------------------
+* Build provider: Other Build providers
+* Project name: "Enter codebuild project name created before"
+* Build type: single build
+------------------------------------------------------
+* Deploy provider: AWS CodeDeploy
+* Application name: "Select codedeploy application created before"
+* Deployment groups: "Deployment group under selected application"
+
+### Review and create pipeline
+
+<img src="diagrams/pipeline.png">
+
+
+
 
 
 
