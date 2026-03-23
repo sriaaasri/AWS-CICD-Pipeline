@@ -207,6 +207,8 @@ Repository: Repository in my GitHub account
 **Logs**
 * Group name: /aws/codebuild/"project-name"
 
+#### Important: Before executing codebuild , make sure your place a buildspec.yml file in project root location. A sample file which i used is present above . please download it and feel free to customize according to your requirements.
+
 <img src="diagrams/codebuild.png">
 
 ---
@@ -246,10 +248,11 @@ we need a service role for codedeploy to access EC2 instances
 * --create deployment and wait for 1-2 minutes deployment will be created--
 
 
-**⚠️ Important:** A deployment will trigger after after deployment creation.
+**⚠️ Important:** A deployment will trigger after after deployment creation. There is a sample appspec.yml file which i used in this repo. download it and use in your own project.
 #### Pre-requests:
 * "appspec.yml" configuration file should be present in S3 output root location
 * S3 bucket should contain output zip file created by codebuild
+
 
 #### Access you application in deployment server 
 

@@ -1,0 +1,21 @@
+version: 0.0
+os: linux
+files:
+  - source: target/webapp.war
+    destination: /opt/dev/apache-tomcat-11.0.18/webapps/
+hooks:
+  ApplicationStop:
+    - location: scripts/1_applicationStop.sh
+      runas: root
+  BeforeInstall:
+    - location: scripts/2_cleanTomcat.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: scripts/3_startTomcat.sh
+      timeout: 300
+      runas: root
+  ValidateService:
+    - location: scripts/4_validate.sh
+      timeout: 300
+      runas: root
