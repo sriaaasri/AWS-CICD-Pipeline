@@ -295,29 +295,22 @@ With CodePipeline, you can create a workflow that automatically moves your code 
 
 <img src="diagrams/pipeline.png">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 ### **9. Step 7: pushing changes and verification**
 
+Now for the final test. After creating pipeline runs automatically and process starts in 3 stages
+
+push the chages to github 
+trigger the pipeline by clicking "Release change"
+we can moitor the process by selecting each stage
+
 ---
 
 ### **10. Conclusion**
+
+In this project, we successfully built an end-to-end CI/CD pipeline using AWS services integrated with GitHub. The pipeline automates the process of building, packaging, and deploying a Spring Boot application to an EC2 instance using CodeBuild and CodeDeploy. This setup eliminates manual deployment steps and ensures faster, consistent, and reliable application delivery.
+
+Through this implementation, we gained hands-on experience with real-world DevOps practices such as pipeline orchestration, automated deployments, and infrastructure configuration. This project serves as a foundational example for building scalable and production-ready CI/CD workflows on AWS.
 
 ---
