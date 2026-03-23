@@ -200,8 +200,8 @@ Repository: Repository in my GitHub account
 
 **Artifacts**
 * Type: Amazon S3
-* Bucketname: "give a existing bucket name created only to save final artifacts"
-* name: "name you prefered of final artifact"
+* Bucketname: "give a existing bucket name to save final artifacts"
+* name: "name you prefered of zip file"
 * Artifacts packaging: Zip
 
 **Logs**
@@ -212,6 +212,56 @@ Repository: Repository in my GitHub account
 ---
 
 ### **7. Step 5: AWS codedeploy setup**
+
+AWS CodeDeploy is a deployment service that automates the process of deploying applications to compute resources such as Amazon EC2 instances. It enables seamless and consistent deployments by managing the entire deployment lifecycle, including copying application files and executing deployment scripts. CodeDeploy works with an agent installed on the EC2 instance, which allows it to interact with the server and perform deployment actions. This helps reduce manual effort, minimize downtime, and ensure reliable application updates.
+
+**Application setup in codedeploy**
+* Application name: "Applicaiton name"
+* Compute platform: EC2/On-premises
+
+**Deployment group setup in codedeploy**
+* Deployment group name: "Deployment group name"
+
+we need a service role for codedeploy to access EC2 instances
+**service role creation**
+* Trusted entity type: AWS service
+* service: CodeDeploy
+* Use case: CodeDeploy
+* Role name: "prefered name for role"
+
+#### Refresh Deployment groups page
+* Service role : "Above created role"
+* Deployment type : In place
+* Environment Configuration: Amazon EC2 instances
+* Tag group1 : key=Name , value="EC2 instance name created in previous step for deployment in Step-2."
+* Deployment configuration: CodeDeployDefault.AllAtOnce  
+
+<img src="diagrams/codeDeploy-group.png">
+
+**Deployment setup in codedeploy**
+
+**⚠️ Important:** A deployment will trigger after after deployment creation.
+**Pre-requests:**
+* "appspec.yml" configuration file should be present in S3 output root location
+* S3 bucket should contain output zip file created by codebuild
+
+* Deployment group: "Deployment group created before"
+* Revison type: My application is stored in Amazon S3
+* Revision location: "Navigate to S3 bucket created by codebuild , select output artifact and copy S3 URI"
+* --create deployment and wait for 1-2 minutes deployment will be created--
+
+Access you application in deployment server 
+
+* Make sure nginx in configured to route traffic to tomcat server 80->8080
+* Append application war file name before the endpoints
+like if your war file created like webapp.war then append webapp
+
+```bash
+http://<EC2-public-IP>/<warfile-name>/<endpoints>
+```
+
+<img src="diagrams/deployment.png.png">
+
 
 ---
 
