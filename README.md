@@ -260,7 +260,7 @@ like if your war file created like webapp.war then append webapp
 http://<EC2-public-IP>/<warfile-name>/<endpoints>
 ```
 
-<img src="diagrams/deployment.png.png">
+<img src="diagrams/deployment.png">
 
 
 ---
