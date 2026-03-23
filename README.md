@@ -240,15 +240,16 @@ we need a service role for codedeploy to access EC2 instances
 
 **Deployment setup in codedeploy**
 
-**⚠️ Important:** A deployment will trigger after after deployment creation.
-#### Pre-requests:
-* "appspec.yml" configuration file should be present in S3 output root location
-* S3 bucket should contain output zip file created by codebuild
-
 * Deployment group: "Deployment group created before"
 * Revison type: My application is stored in Amazon S3
 * Revision location: "Navigate to S3 bucket created by codebuild , select output artifact and copy S3 URI"
 * --create deployment and wait for 1-2 minutes deployment will be created--
+
+
+**⚠️ Important:** A deployment will trigger after after deployment creation.
+#### Pre-requests:
+* "appspec.yml" configuration file should be present in S3 output root location
+* S3 bucket should contain output zip file created by codebuild
 
 Access you application in deployment server 
 
