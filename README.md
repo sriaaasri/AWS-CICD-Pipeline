@@ -207,7 +207,7 @@ Repository: Repository in my GitHub account
 **Logs**
 * Group name: /aws/codebuild/"project-name"
 
-#### Important: Before executing codebuild , make sure your place a buildspec.yml file in project root location. A sample file which i used is present above . please download it and feel free to customize according to your requirements.
+#### Important: Before executing codebuild , make sure your place a buildspec.yml file in project root location. A sample buildspec.yml file  and scripts folder which i used in my project is present in this repo . please download it and feel free to customize according to your requirements.
 
 <img src="diagrams/codebuild.png">
 
